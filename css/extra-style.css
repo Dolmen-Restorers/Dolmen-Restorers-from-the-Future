@@ -1,0 +1,156 @@
+@charset "utf-8";
+body {
+}
+
+/* CSS Document */
+@media (max-width: 600px) {
+  p {
+    font-size: 14px;
+    color: #FFFFFF;
+	}
+  p2 {
+    font-size: 12px;
+    color: #FFFFFF;
+	}
+ h2{font-size: 16px;
+	}
+ h1{font-size: 16px;
+	}
+ a {
+    font-size: 14px;
+    color: #FFFFFF;
+	}
+}
+ a2 {
+    font-size: 12px;
+    color: #FFFFFF;
+	}
+  div.myAlex {
+	display:none;
+	}
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+@media (min-width: 601px) {
+  p {
+    font-size: 16px;
+    color: #FFFFFF;
+}
+  p2 {
+    font-size: 16px;
+    color: #FFFFFF;
+	}
+  a {
+    font-size: 16px;
+    color: #FFFFFF;
+}
+  h2 {font-size: 17px;
+}
+  h1 {font-size: 18px;
+}
+  div.myAlex {
+	display:block;
+	}
+/* CSS Document */
+@media (min-width: 1300px) {
+  p {
+    font-size: 17px;
+    color: #FFFFFF;
+}
+  p2 {
+    font-size: 17px;
+    color: #FFFFFF;
+}
+  a {
+    font-size: 17px;
+    color: #FFFFFF;
+}
+  h2 {
+    font-size: 22px;
+    color: #FFFFFF;
+}
+  h1 {
+    font-size: 22px;
+    color: #FFFFFF;
+}
+@media (min-width: 1899px) {
+  p,a {
+    font-size: 20px;
+	  color: #FFFFFF;
+	}
+  p2 {
+    font-size: 20px;
+	  color: #FFFFFF;
+	}
+	h2{font-size: 24px;
+	}
+	h1{font-size: 30px;
+	}
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+	  
+}
+body {
+    font-size: 20px;
+    /* [disabled]font-size-adjust: 3vw; */
+}
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 400
+
+.leckerli-one-regular {
+  font-family: "Leckerli One", cursive;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+  div.example {
+    font-size: 16px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  div.example {
+    font-size: 14px;
+  }
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (min-width: 601px) {
+  div.example {
+    font-size: 16px;
+  }
+}
+
+
+
+@media (min-width: 1900px){
+	  div.example {
+    font-size: 18px;
+}
+}
+
+@media (min-width: 1796px) and (max-width: 1921px){
+	p {font-size-adjust: auto;
+		
+}
+@media (min-width: 1796px) and (max-width: 1921px){	
+	a {font-size-adjust: auto}
+}
+@media (min-width: 1796px) and (max-width: 1921px){	
+	h2 {font-size-adjust: auto}
+}
+@media (min-width: 1796px) and (max-width: 1921px){	
+	h1 {font-size-adjust: auto}
+}
+	
+	
+	}}}
