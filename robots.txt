@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dolmen-restorers.github.io/Dolmen-Restorers-from-the-Future/sitemap.xml
