@@ -1,5 +1,4 @@
-
-** {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,8 +11,8 @@ body {
   background: #060614;
   background: linear-gradient(180deg, #0a001a 0%, #0e0e2a 40%, #000814 100%);
   min-height: 100vh;
-background: url("../images/cosmic-bg.jpg") no-repeat center center fixed;
-background-size: cover;
+  background: url('cosmic-bg.jpg') no-repeat center center fixed; */
+  background-size: cover; */
 }
 
 .container {
@@ -49,6 +48,228 @@ header {
 nav {
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+/* ── DESKTOP NAVIGATION ──────────────────────────────────────────────── */
+.nav-links {
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #b0c8ff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.6rem 1.3rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px rgba(100, 140, 255, 0.5);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: rgba(90, 130, 255, 0.22);
+  color: white;
+  box-shadow: 0 0 15px rgba(100, 140, 255, 0.45);
+}
+
+/* Dropdown (desktop) */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(10, 10, 35, 0.94);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(90, 130, 255, 0.35);
+  border-radius: 8px;
+  min-width: 160px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.65);
+  padding: 0.5rem 0;
+  z-index: 200;
+  list-style: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1.4rem;
+  color: #b0c8ff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(90, 130, 255, 0.25);
+  color: white;
+}
+
+/* ── MOBILE HAMBURGER & MENU ─────────────────────────────────────────── */
+.hamburger {
+  display: none;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  color: #b0c8ff;
+  cursor: pointer;
+  text-shadow: 0 0 8px #6080e0;
+  padding: 0.5rem;
+}
+
+.mobile-menu {
+  display: none;
+  list-style: none;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(8, 8, 35, 0.96);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(80, 120, 255, 0.3);
+    padding: 1.2rem 0.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+
+  /* Main items (Home, About Us, Contact) */
+  .mobile-menu > li > a {
+    color: #b0c8ff;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 0.9rem 1.5rem;
+    display: block;
+    text-align: center;
+    border-radius: 6px;
+    transition: all 0.25s;
+    text-shadow: 0 0 5px rgba(100, 140, 255, 0.5);
+  }
+
+  .mobile-menu > li > a:hover,
+  .mobile-menu > li > a.active {
+    background: rgba(90, 130, 255, 0.22);
+    color: white;
+    box-shadow: 0 0 12px rgba(100, 140, 255, 0.4);
+  }
+
+  /* Submenu (Recent, News, Videos) – smaller text */
+  .mobile-dropdown .dropdown-menu {
+    display: none;
+    position: static;
+    background: rgba(20, 20, 60, 0.7);
+    border: none;
+    box-shadow: none;
+    margin: 0.3rem 0 0.8rem 2rem;
+    padding: 0.3rem 0;
+  }
+
+  .mobile-dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  .mobile-dropdown .dropdown-menu a {
+    font-size: 1.05rem;           /* smaller than main items */
+    padding: 0.75rem 2rem;
+    text-align: left;
+    color: #c0d0ff;
+    text-decoration: none;
+    display: block;
+  }
+
+  .mobile-dropdown .dropdown-menu a:hover {
+    background: rgba(90, 130, 255, 0.18);
+  }
+
+  .mobile-dropdown > a {
+    cursor: pointer;
+  }
+}
+
+/* ── MAIN CONTENT STYLES (unchanged) ─────────────────────────────────── */
+main {
+  padding: 3rem 0 5rem;
+}
+
+.hero h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #a8b8ff;
+  margin-bottom: 2rem;
+  text-shadow: 
+    0 0 15px #4050b0,
+    0 0 30px #203080;
+}
+
+.content {
+  background: rgba(18, 18, 50, 0.62);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(100, 140, 255, 0.28);
+  border-radius: 16px;
+  padding: 2.8rem 2.5rem;
+  margin: 0 1.2rem 3rem;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 12px 45px rgba(0, 0, 40, 0.65);
+}
+
+.content p {
+  margin-bottom: 1.4rem;
+  font-size: 1.1rem;
+  color: #e0e8ff;
+}
+
+footer {
+  text-align: center;
+  padding: 3.5rem 1rem 2.5rem;
+  color: #8899cc;
+  font-size: 0.97rem;
+  border-top: 1px solid rgba(80, 100, 220, 0.2);
+}
+  margin-bottom: 0.8rem;
+  text-shadow: 
+    0 0 10px #5060c0,
+    0 0 20px #304080,
+    0 0 30px #203060;
+  letter-spacing: 1.2px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
 }
 
 .nav-links {
@@ -68,6 +289,179 @@ nav {
   text-shadow: 0 0 5px rgba(100, 140, 255, 0.5);
 }
 
+.nav-links a:hover,
+.nav-links a.active {
+  background: rgba(90, 130, 255, 0.22);
+  color: white;
+  box-shadow: 0 0 15px rgba(100, 140, 255, 0.45);
+}
+
+/* Dropdown (desktop) */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(10, 10, 35, 0.94);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(90, 130, 255, 0.35);
+  border-radius: 8px;
+  min-width: 160px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.65);
+  padding: 0.5rem 0;
+  z-index: 200;
+  list-style: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1.4rem;
+  color: #b0c8ff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(90, 130, 255, 0.25);
+  color: white;
+}
+
+/* Hamburger (mobile) */
+.hamburger {
+  display: none;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  color: #b0c8ff;
+  cursor: pointer;
+  text-shadow: 0 0 8px #6080e0;
+  padding: 0.5rem;
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(8, 8, 35, 0.96);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(80, 120, 255, 0.3);
+    padding: 1.4rem 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+
+  .mobile-menu a {
+    font-size: 1.3rem;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    display: block;
+  }
+
+  /* Mobile dropdown / submenu */
+  .mobile-dropdown .dropdown-menu {
+    display: none;
+    position: static;
+    background: rgba(20, 20, 60, 0.7);
+    border: none;
+    box-shadow: none;
+    margin: 0.4rem 0 0.8rem 1.8rem;
+    padding: 0.3rem 0;
+  }
+
+  .mobile-dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  .mobile-dropdown > a {
+    cursor: pointer;
+  }
+}
+
+main {
+  padding: 3rem 0 5rem;
+}
+
+.hero h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #a8b8ff;
+  margin-bottom: 2rem;
+  text-shadow: 
+    0 0 15px #4050b0,
+    0 0 30px #203080;
+}
+
+.content {
+  background: rgba(18, 18, 50, 0.62);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(100, 140, 255, 0.28);
+  border-radius: 16px;
+  padding: 2.8rem 2.5rem;
+  margin: 0 1.2rem 3rem;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 12px 45px rgba(0, 0, 40, 0.65);
+}
+
+.content p {
+  margin-bottom: 1.4rem;
+  font-size: 1.1rem;
+  color: #e0e8ff;
+}
+
+h2, h3 {
+  color: #b8d0ff;
+  margin: 2.4rem 0 1.2rem;
+  text-shadow: 0 0 10px rgba(140, 180, 255, 0.6);
+}
+
+video {
+  width: 100%;
+  max-width: 860px;
+  margin: 2.5rem auto;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 15px 55px rgba(0,0,0,0.75);
+  border: 1px solid rgba(110, 150, 255, 0.3);
+}
+
+footer {
+  text-align: center;
+  padding: 3.5rem 1rem 2.5rem;
+  color: #8899cc;
+  font-size: 0.97rem;
+  border-top: 1px solid rgba(80, 100, 220, 0.2);
+}
 .nav-links a:hover,
 .nav-links a.active {
   background: rgba(90, 130, 255, 0.22);
