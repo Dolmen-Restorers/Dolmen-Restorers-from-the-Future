@@ -30,6 +30,10 @@
             border-radius: 5;
             text-decoration: none;
         }
+		body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
     </style>
     <style>
         }
@@ -133,7 +137,7 @@
             overflow: hidden;
             float: left;
             position: fixed;
-            width: 95%;
+            width: 100%;
             transition: top 1.3s;
 
         }
@@ -669,40 +673,50 @@
 </head>
 
 <body>
-	    <header>
-        <div class="topnav" id="myTopnav">
-            <a href="index.html" class="active">Home</a>
-            <a href="About.html">About Us</a>
-            <div class="dropdown">
-                <button class="dropbtn">Restorations <i class="fa fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="EMDR.html">Recent</a>
-                    <a href="BSFT.html">News</a>
-                    <a href="CBT.html">Videos</a>
-                </div>
-            </div>
-            <a href="Contact.html">Contact</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">Menu ☰</a>
-        </div>
-    </header>
-<div style="padding-top: 70px;">   <!-- increased slightly to clear fixed navbar -->
-
-    
-        <!-- Your first big table or main content goes here -->
-        <table width="100%" border="0">
+    <table width="98%" align="center">
+        <tbody>
             <tr>
-                <td align="center">
-                    <!-- Logo -->
-                    <picture>
-                        <source media="(min-width: 500px)" srcset="images/long-logo.png">
-                        <source media="(min-width: 300px)" srcset="images/facebook1.png">
-                        <source media="(min-width: 200px)" srcset="images/Logo-small.jpg">
-                        <img src="images/Logo.png" alt="Logo for site" style="max-width:80%; height:auto;">
-                    </picture>
+    <header>
+	<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="About.html">About us</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">Restorations
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="EMDR.html">Recent</a>
+      <a href="BSFT.html">News</a>
+      <a href="CBT.html">Videos</a>
+    </div>
+  </div>
+  <a href="Contact.html">Contact</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">Menu &#9776;</a>
+</div>
+	</header>
+                <table width="100%" border="0" style="padding-top: 50px">
+                    <tbody>
+                        <tr>
+                            <th scope="col">
+                                <table width="80%" border="0">
+                                    <tbody>
+                                        <tr>
+
+                                            <picture>
+                                                <source media="(min-width: 500px)" srcset="images/long-logo.png">
+                                                <source media="(min-width: 300px)" srcset="images/facebook1.png">
+                                                <source media="(min-width: 200px)" srcset="images/Logo-small.jpg">
+                                                <img src="images/Logo.png" align="center" width="80%" height="auto" alt="Logo banner">
 
 
+                                            </picture>
 
-
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </th>
+                        </tr>
                         <tr>
                             <td align="left">
                                 <table width="100%" border="0">
@@ -744,7 +758,7 @@
                                                                             <th align="center" valign="top" scope="row">                                                                      <table width="100%"  border="0">
                                                                       <tbody>
                                                                         
-<video controls style="max-width: 100%; height: auto; margin: 20px 0;">
+<video width="320" height="240" autoplay muted controls>
   <source src="images/DRF Escape.mp4" type="video/mp4">
 
 Your browser does not support the video tag.
@@ -768,7 +782,7 @@ Your browser does not support the video tag.
                                                                         </tr>
                                                                         <tr>
                                                                             <th align="center" valign="top" scope="row">
-                                                                                <table width="95%" border="0">
+                                                                                <table width="100%" border="0">
                                                                                     <tbody>
                                                                                         <tr>
                                                                                             <th scope="col" width="35%">
