@@ -1,26 +1,4 @@
 @charset "utf-8";
-html, body {
-  width: 100%;
-  overflow-x: hidden;     /* prevents side-scrolling */
-}
-
-.container {
-  width: 100%;
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 0 12px;
-  }
-  
-  main {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-}
 body {
 }
 
