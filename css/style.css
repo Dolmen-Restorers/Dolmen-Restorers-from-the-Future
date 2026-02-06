@@ -22,7 +22,10 @@ body {
 }
 
 header {
-  background: rgba(8, 8, 70, 0.50);
+  background: rgba(8, 8, 70, 0.3);
+	       
+            
+
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
   border-bottom: 1px solid rgba(90, 120, 255, 0.25);
