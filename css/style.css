@@ -22,10 +22,7 @@ body {
 }
 
 header {
-  background: rgba(8, 8, 70, 0.3);
-	       
-            
-
+  background: rgba(8, 8, 30, 0.72);
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
   border-bottom: 1px solid rgba(90, 120, 255, 0.25);
@@ -38,7 +35,7 @@ header {
 
 .site-title {
   color: #d0d8ff;
-  font-size: 1.5rem;
+  font-size: 2.3rem;
   text-align: center;
   margin-bottom: 0.8rem;
   text-shadow: 
@@ -46,19 +43,11 @@ header {
     0 0 20px #304080,
     0 0 30px #203060;
   letter-spacing: 1.2px;
-	            overflow: hidden;
-            white-space: nowrap;
-            width: 0;
-            animation: typing;
-            animation-duration: 3s;
-            animation-timing-function: steps(30, end);
-            animation-fill-mode: forwards;
 }
        .typed {
             overflow: hidden;
             white-space: nowrap;
             width: 0;
-		   font-size: 1.5rem;
             animation: typing;
             animation-duration: 3s;
             animation-timing-function: steps(30, end);
@@ -69,116 +58,170 @@ nav {
   justify-content: center;
   position: relative;
 }
-/* =============================================
-   Header & Navigation
-============================================= */
 
-header {
-  padding: 1rem 0;
-  background: rgba(30, 144, 255, 0.45
-
-);           /* or your preferred color */
-  color: white;
-  position: relative;         /* important for absolute positioning */
-	font-size: 1.5rem;
+/* ── DESKTOP NAVIGATION ──────────────────────────────────────────────── */
+.nav-links {
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.nav-links a {
+  color: #b0c8ff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.6rem 1.3rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px rgba(100, 140, 255, 0.5);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: rgba(90, 130, 255, 0.22);
+  color: white;
+  box-shadow: 0 0 15px rgba(100, 140, 255, 0.45);
+}
+
+/* Dropdown (desktop) */
+.dropdown {
   position: relative;
 }
 
-.site-title {
-  margin: 0;
-  font-size: 1.6rem;
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(10, 10, 35, 0.94);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(90, 130, 255, 0.35);
+  border-radius: 8px;
+  min-width: 160px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.65);
+  padding: 0.5rem 0;
+  z-index: 200;
+  list-style: none;
 }
 
-/* Hamburger - hidden on desktop, visible on mobile */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1.4rem;
+  color: #b0c8ff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(90, 130, 255, 0.25);
+  color: white;
+}
+
+/* ── MOBILE HAMBURGER & MENU ─────────────────────────────────────────── */
 .hamburger {
   display: none;
+  font-size: 2.5rem;
   background: none;
   border: none;
-  color: white;
-  font-size: 2rem;
+  color: #b0c8ff;
   cursor: pointer;
+  text-shadow: 0 0 8px #6080e0;
   padding: 0.5rem;
 }
 
-/* Desktop nav - hidden on mobile */
-.nav-links {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 2rem;
-}
-
-/* Mobile menu - hidden by default */
 .mobile-menu {
   display: none;
+  list-style: none;
 }
 
-/* =============================================
-   Mobile styles (hamburger + layout fix)
-============================================= */
-
-@media (max-width: 768px) {   /* adjust breakpoint if needed */
-
-  .container {
-    justify-content: flex-start;   /* title stays left */
-    position: relative;
-  }
-
-  .site-title {
-    flex: 1;                     /* takes available space */
-  }
-
-  /* Move hamburger to top-right corner */
+/* Mobile view */
+@media (max-width: 768px) {
   .hamburger {
     display: block;
     position: absolute;
-    left: 1.5rem;               /* distance from right edge */
-    top: 50%;
-    transform: translateY(-50%); /* perfect vertical centering */
-    z-index: 100;
+    top: 1.2rem;
+    right: 1.5rem;
   }
 
-  /* Hide desktop navigation completely on mobile */
   .nav-links {
-    display: none;
+    display: none !important;
   }
 
-  /* Mobile menu styling (when opened) */
   .mobile-menu {
-    display: none;               /* hidden until toggled */
+    display: none;
+    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background: #111;
-    flex-direction: column;
-    padding: 1rem 1.5rem;
-    list-style: none;
-    margin: 0;
+    background: rgba(8, 8, 35, 0.96);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(80, 120, 255, 0.3);
+    padding: 1.2rem 0.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
   }
 
   .mobile-menu.active {
     display: flex;
   }
 
-  .mobile-menu li {
-    padding: 0.8rem 0;
+  /* Main items (Home, About Us, Contact) */
+  .mobile-menu > li > a {
+    color: #b0c8ff;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 0.9rem 1.5rem;
+    display: block;
+    text-align: center;
+    border-radius: 6px;
+    transition: all 0.25s;
+    text-shadow: 0 0 5px rgba(100, 140, 255, 0.5);
   }
 
-  .mobile-menu a {
+  .mobile-menu > li > a:hover,
+  .mobile-menu > li > a.active {
+    background: rgba(90, 130, 255, 0.22);
     color: white;
+    box-shadow: 0 0 12px rgba(100, 140, 255, 0.4);
+  }
+
+  /* Submenu (Recent, News, Videos) – smaller text */
+  .mobile-dropdown .dropdown-menu {
+    display: none;
+    position: static;
+    background: rgba(20, 20, 60, 0.7);
+    border: none;
+    box-shadow: none;
+    margin: 0.3rem 0 0.8rem 2rem;
+    padding: 0.3rem 0;
+  }
+
+  .mobile-dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  .mobile-dropdown .dropdown-menu a {
+    font-size: 1.05rem;           /* smaller than main items */
+    padding: 0.75rem 2rem;
+    text-align: left;
+    color: #c0d0ff;
     text-decoration: none;
-    font-size: 1.1rem;
+    display: block;
+  }
+
+  .mobile-dropdown .dropdown-menu a:hover {
+    background: rgba(90, 130, 255, 0.18);
+  }
+
+  .mobile-dropdown > a {
+    cursor: pointer;
   }
 }
 
@@ -189,7 +232,7 @@ main {
 
 .hero h1 {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2.8rem;
   color: #a8b8ff;
   margin-bottom: 2rem;
   text-shadow: 
