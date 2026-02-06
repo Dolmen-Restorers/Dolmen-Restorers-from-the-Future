@@ -145,8 +145,10 @@ nav {
   .hamburger {
     display: block;
     position: absolute;
-    top: 1.2rem;
-    right: 1.5rem;
+    left: 1.5rem;               /* distance from right edge */
+    top: 50%;
+    transform: translateY(-50%); /* perfect vertical centering */
+    z-index: 100;
   }
 
   .nav-links {
