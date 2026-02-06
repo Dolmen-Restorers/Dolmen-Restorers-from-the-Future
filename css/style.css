@@ -58,6 +58,7 @@ header {
             overflow: hidden;
             white-space: nowrap;
             width: 0;
+		   font-size: 1.5rem;
             animation: typing;
             animation-duration: 3s;
             animation-timing-function: steps(30, end);
@@ -74,9 +75,12 @@ nav {
 
 header {
   padding: 1rem 0;
-  background: rgba(0, 123, 255, 0.25);           /* or your preferred color */
+  background: rgba(30, 144, 255, 0.45
+
+);           /* or your preferred color */
   color: white;
   position: relative;         /* important for absolute positioning */
+	font-size: 1.5rem;
 }
 
 .container {
@@ -185,7 +189,7 @@ main {
 
 .hero h1 {
   text-align: center;
-  font-size: 2.8rem;
+  font-size: 1.5rem;
   color: #a8b8ff;
   margin-bottom: 2rem;
   text-shadow: 
