@@ -169,7 +169,7 @@ nav {
   position: absolute;
   right: 0.75rem;     /* stays inside banner */
   top: 50%;          /* vertical centre */
-  transform: translateY(-80%);
+  transform: translateY(-70%);
 }
 
   /* Prevent title overlapping hamburger */
@@ -421,7 +421,7 @@ nav {
   position: absolute;
   right: 0.75rem;     /* stays inside banner */
   top: 50%;          /* vertical centre */
-  transform: translateY(-80%);
+  transform: translateY(-70%);
 }
 
   /* Prevent title overlapping hamburger */
@@ -539,7 +539,7 @@ footer {
   position: absolute;
   right: 0.75rem;     /* stays inside banner */
   top: 50%;          /* vertical centre */
-  transform: translateY(-80%);
+  transform: translateY(-70%);
 }
 
 
