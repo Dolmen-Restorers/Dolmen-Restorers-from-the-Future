@@ -13,13 +13,36 @@ body {
   min-height: 100vh;
   background: url('cosmic-bg.jpg') no-repeat center center fixed; */
   background-size: cover; */
-}
+}        .typed {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            animation: typing;
+            animation-duration: 3s;
+            animation-timing-function: steps(30, end);
+            animation-fill-mode: forwards;
+			
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
 
 .container {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 1.5rem;
-}
+}        .container-fluid {
+            max-width: 100%;
+            height: auto;
+            text-align: center;
+        }
 
 header {
   background: rgba(8, 8, 30, 0.72);
@@ -43,16 +66,13 @@ header {
     0 0 20px #304080,
     0 0 30px #203060;
   letter-spacing: 1.2px;
-}
-       .typed {
-            overflow: hidden;
-            white-space: nowrap;
-            width: 0;
-            animation: typing;
-            animation-duration: 3s;
-            animation-timing-function: steps(30, end);
-            animation-fill-mode: forwards;
+}        .container {
+            display: inherit;
+
+
+
         }
+
 nav {
   display: flex;
   justify-content: center;
@@ -145,10 +165,8 @@ nav {
   .hamburger {
     display: block;
     position: absolute;
-    left: 1.5rem;               /* distance from right edge */
-    top: 50%;
-    transform: translateY(-50%); /* perfect vertical centering */
-    z-index: 100;
+    top: 1.2rem;
+    right: 1.5rem;
   }
 
   .nav-links {
