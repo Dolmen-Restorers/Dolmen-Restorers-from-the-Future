@@ -167,8 +167,8 @@ nav {
 .hamburger {
   display: block;
   position: absolute;
-  right: 1.2rem;     /* stays inside banner */
-  top: 10%;          /* vertical centre */
+  right: 0.75rem;     /* stays inside banner */
+  top: 50%;          /* vertical centre */
   transform: translateY(-80%);
 }
 
@@ -419,8 +419,8 @@ nav {
 .hamburger {
   display: block;
   position: absolute;
-  right: 1.2rem;     /* stays inside banner */
-  top: 10%;          /* vertical centre */
+  right: 0.75rem;     /* stays inside banner */
+  top: 50%;          /* vertical centre */
   transform: translateY(-80%);
 }
 
@@ -537,8 +537,8 @@ footer {
 .hamburger {
   display: block;
   position: absolute;
-  right: 1.2rem;     /* stays inside banner */
-  top: 10%;          /* vertical centre */
+  right: 0.75rem;     /* stays inside banner */
+  top: 50%;          /* vertical centre */
   transform: translateY(-80%);
 }
 
