@@ -55,9 +55,7 @@ header {
   z-index: 1000;
   box-shadow: 0 4px 20px rgba(0, 0, 30, 0.6);
 }
-header {
-  position: relative;
-}
+
 .site-title {
   color: #d0d8ff;
   font-size: 2.3rem;
@@ -169,7 +167,7 @@ nav {
 .hamburger {
   display: block;
   position: absolute;
-  right: 0.75rem;     /* stays inside banner */
+  left: 0.75rem;     /* stays inside banner */
   top: 50%;          /* vertical centre */
   transform: translateY(-70%);
 }
@@ -421,7 +419,7 @@ nav {
 .hamburger {
   display: block;
   position: absolute;
-  right: 0.75rem;     /* stays inside banner */
+  left: 0.75rem;     /* stays inside banner */
   top: 50%;          /* vertical centre */
   transform: translateY(-70%);
 }
@@ -539,7 +537,7 @@ footer {
 .hamburger {
   display: block;
   position: absolute;
-  right: 0.75rem;     /* stays inside banner */
+  left: 0.75rem;     /* stays inside banner */
   top: 50%;          /* vertical centre */
   transform: translateY(-70%);
 }
