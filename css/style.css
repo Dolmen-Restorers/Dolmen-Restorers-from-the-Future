@@ -49,13 +49,15 @@ header {
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
   border-bottom: 1px solid rgba(90, 120, 255, 0.25);
-  
+  padding: 1.3rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 20px rgba(0, 0, 30, 0.6);
 }
-
+header {
+  position: relative;
+}
 .site-title {
   color: #d0d8ff;
   font-size: 2.3rem;
