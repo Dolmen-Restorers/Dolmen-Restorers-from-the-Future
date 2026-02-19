@@ -107,14 +107,14 @@ header.header-hidden {
   transform: translateY(-100%);
 }
 .hero {
-  
+  min-height: 70vh;
   display: flex;
   justify-content: center;
 
   /* FIX */
   align-items: flex-start;
 
-  padding-top: 30px; /* adjust to taste */
+  padding-top: 10px; /* adjust to taste */
   
   text-align: center;
   background:
@@ -398,7 +398,9 @@ nav {
   box-shadow:
     0 0 30px rgba(80, 50, 231, 0.2);
 }
-
+.content-card {
+  margin: -80px auto 30px;
+}
 /* Two-column layout */
 .two-column {
 	
@@ -445,4 +447,72 @@ video {
 .footer-note {
   font-size: 12px;
   margin-top: 30px;
+}
+/* =========================
+   HERO BOOT SEQUENCE
+========================= */
+
+.hero-content {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  animation: heroBoot 1.4s ease-out forwards;
+}
+
+@keyframes heroBoot {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(60px) scale(0.96);
+  }
+
+  60% {
+    opacity: 1;
+    filter: blur(2px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+  }
+}
+.hero {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+.hero-content {
+  position: relative;
+}
+
+.hero-content::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 20px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(108,99,255,0.5),
+    transparent
+  );
+  opacity: 0.4;
+  filter: blur(15px);
+  animation: glowPulse 6s linear infinite;
+  z-index: -1;
+}
+
+@keyframes glowPulse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.hero h1 {
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  text-shadow:
+    0 0 5px #6c63ff,
+    0 0 15px #6c63ff,
+    0 0 35px rgba(108,99,255,0.7);
 }
