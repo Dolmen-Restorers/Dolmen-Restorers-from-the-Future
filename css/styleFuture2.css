@@ -99,7 +99,7 @@ header.header-hidden {
   transform: translateY(-100%);
 }
 .hero {
-  min-height: 70vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
 
