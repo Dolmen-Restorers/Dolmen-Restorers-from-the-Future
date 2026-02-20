@@ -509,3 +509,32 @@ video {
     0 0 35px rgba(108,99,255,0.7);
 }
 /* slide over */
+.hero {
+  position: relative;
+  top: 0;
+  z-index: 1;
+}
+.content-card {
+  position: relative;
+  z-index: 5;
+
+  margin: -120px auto 40px; /* adjust depth */
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+    position: relative;
+    top: 0;
+  }
+
+  .content-card {
+    margin: -140px auto 40px;
+  }
+
+}
+.content-card {
+  box-shadow:
+    0 -20px 40px rgba(0,0,0,0.6),
+    0 0 30px rgba(80,50,231,0.2);
+}
